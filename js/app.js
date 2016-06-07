@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-var questionCounter = 0;
+var i = 0;
 
 
 
@@ -17,7 +17,7 @@ questionsArray = [
 
 { 'question' : 'During Mark McGwire\'s historic 1998 season, he hit 70 home runs.  Who hit the second most that year?',
   'choices' : ['A) Sammy Sosa, ', 'B) Ken Griffey Jr., ', 'C) Pedro Cerrano, ', 'D) Barry Bonds'],
-  'answer' : 'A) Sammy Sosa',
+  'answer' : 'A) Sammy Sosa, ',
   'tidbit' : 'Sosa came in second with 66. Pedro Cerrano is a character in the movie "Major League."'},
 
 { 'question' : 'Nolan Ryan has thrown the most career no-hitters with seven. Who has the second most?',
@@ -25,7 +25,7 @@ questionsArray = [
   'answer' : 'D) Sandy Koufax',
   'tidbit' : 'Sandy Koufax threw four no-hitters in his career and famously refused to play on Yom Kippur during the 1965 World Series.'}
 ];
-answersArray = ['Barry Bonds', 'Sammy Sosa'];
+
 
 
     console.log(questionsArray.length);
@@ -37,6 +37,7 @@ $('#answerA').click(function() {
   for (var i = 0; i < questionsArray.length; i++){
     if (questionsArray[i].answer === questionsArray[i].choices[0]) {
         console.log('correct answer A');
+        $('#pAnswerArea').html(questionsArray[i].choices[0]);
     }
   }
 })
@@ -46,6 +47,7 @@ $('#answerB').click(function() {
   for (var i = 0; i < questionsArray.length; i++){
     if (questionsArray[i].answer === questionsArray[i].choices[1]) {
         console.log('correct answer B');
+        $('#pAnswerArea').html(questionsArray[i].choices[1]);
     }
   }
 })
@@ -65,11 +67,12 @@ $('#answerD').click(function() {
   for (var i = 0; i < questionsArray.length; i++){
     if (questionsArray[i].answer === questionsArray[i].choices[3]) {
         console.log('correct answer D');
+        $('#pAnswerArea').html(questionsArray[i].choices[3]);
     }
   }
 })
 //start button listener
-$('#start').click(function(e) {
+$('#start').click(function() {
     //clicking will start game - show first question
     //shows question
       $('#questionDiv').html(questionsArray[0].question);
@@ -81,22 +84,28 @@ $('#start').click(function(e) {
 
 
 
-    // showQuestion(questionCounter);
-    // showChoices(questionCounter);
+    // showQuestion(i);
+    // showChoices(i);
 
     //tidbit function will show tidbit and advance quiz
     // showTidbit();
 })
 
 //Next question button
-$('#next').click(function() {
-  i = 1;
-  while (i < questionsArray.length) {
+$('#next').click(function()
+
+{
+
+   {
   $('#pAnswerArea').html('');
 
     $('#questionDiv').html(questionsArray[i].question);
     $('#showAnswerDiv').html(questionsArray[i].choices);
     // answerQuestion(questionsArray);
+    i++;
+    if (i === questionsArray.length) {
+      i = 0;
+    }
 }
 
 
@@ -110,9 +119,9 @@ function answerQuestion(questionsArray) {
 }
 
 //question display function
-function showQuestion(questionCounter) {
+function showQuestion(i) {
 
-  return questionInputArea.innerHTML = questionsArray[questionCounter]['question'];
+  return questionInputArea.innerHTML = questionsArray[i]['question'];
 
   }
 
@@ -120,18 +129,18 @@ function showQuestion(questionCounter) {
 
 //answer display function
 
-function showChoices(questionCounter) {
+function showChoices(i) {
 
-     return answerInputArea.innerHTML = "<input type='button' value='" + questionsArray[questionCounter] + "'/>";
+     return answerInputArea.innerHTML = "<input type='button' value='" + questionsArray[i] + "'/>";
     }
 // console.log('choices loop');
 
 
 //function to show tidbit after question has been answered
 //MAY NEED TO BE INSIDE showChoices FUNCTION
-function showTidbit(questionCounter) {
-      alert(questionsArray[questionCounter].tidbit);
-  } questionCounter++;
+function showTidbit(i) {
+      alert(questionsArray[i].tidbit);
+  } i++;
 
 
 
