@@ -3,7 +3,7 @@
   font-family: 'Playball', cursive;
 }
 
-.questionDiv, .answer {
+#questionDiv, #answer {
   border: 1px solid black;
 }
 
@@ -18,11 +18,23 @@
 }
 
 
-.questionDiv, .answer, .left-border, .right-border {
+#questionDiv, #answer, .left-border, .right-border {
   height: 200px;
 }
 
 #start {
   text-align: center;
   vertical-align: center;
+}
+
+#showAnswerDiv {
+  width: 100%;
+  height: 50%;
+  border: 1px solid black;
+}
+
+#pAnswerArea {
+  width: 100%;
+  height:30%;
+  border: 1px solid black;
 }

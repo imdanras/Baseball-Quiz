@@ -15,21 +15,41 @@
   <h1 class="title">The Baseball Quiz</h1>
   <!-- Question Area -->
   <div class="container">
-    <div class="left-border col-md-2"></div>
-      <div class="questionDiv col-md-8">
-        <div class="btn-group">
-          <button type="button" id="start">Start</button>
-        </div>
+    <div class="left-border col-md-2">
+      <div class="btn-group">
+          <form>
+            <button type="button" id="start">Start</button>
+      </div>
+      <div class="btn-group">
+          <button type="button" id="next">Next</button>
+      </div>
+      </form>
+    </div>
+      <div id="questionDiv" class="col-md-8">
+
       </div>
     <div class="right-border col-sm-2"></div>
   </div>
 <!-- Answer Area -->
-  <div class="container">
-    <div class="left-border col-md-2"></div>
-      <div class="answer col-md-8"></div>
-    <div class="right-border col-sm-2"></div>
-  </div>
+  <form>
+    <div class="container">
+      <div class="left-border col-md-2"></div>
+        <div id="answer" class="col-md-8">
+          <!-- buttons -->
+          <div id="showAnswerDiv">
 
+          </div>
+            <button type="button" id="answerA">A</button>
+            <button type="button" id="answerB">B</button>
+            <button type="button" id="answerC">C</button>
+            <button type="button" id="answerD">D</button>
+            <br>
+            <p id="pAnswerArea"></p>
+
+        </div>
+      <div class="right-border col-sm-2"></div>
+    </div>
+</form>
 
 
 
