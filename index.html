@@ -9,50 +9,60 @@
   integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
   rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Orbitron:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+<div class="body">
   <h1 class="title">The Baseball Quiz</h1>
   <!-- Question Area -->
   <div class="container">
     <div class="left-border col-md-2">
       <div class="btn-group">
           <form>
-            <button type="button" id="start">Start</button>
+            <button type="button" id="start" class="btn btn-primary btn-lg" data-toggle="modal">Start</button>
       </div>
       <div class="btn-group">
-          <button type="button" id="next">Next</button>
+          <button type="button" id="next" class="btn btn-primary btn-lg" data-toggle="modal">Next</button>
       </div>
       </form>
     </div>
       <div id="questionDiv" class="col-md-8">
 
       </div>
-    <div class="right-border col-sm-2"></div>
+    <div class="right-border-upper col-sm-2"> Scoreboard</div>
   </div>
 <!-- Answer Area -->
   <form>
     <div class="container">
       <div class="left-border col-md-2">
       <form>
-        <button type="submit" id="reset">Reset</button>
+        <button type="submit" id="reset" class="btn btn-primary btn-lg" data-toggle="modal">Reset</button>
       </form>
       </div>
         <div id="answer" class="col-md-8">
           <!-- buttons -->
           <div id="showAnswerDiv">
+            <div  id="answerButtons">
+              <button type="button" id="answerA" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"></button>
+              <button type="button" id="answerB" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"></button>
+              <button type="button" id="answerC" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"></button>
+              <button type="button" id="answerD" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"></button>
+            </div>
 
           </div>
-          <div  id="answerButtons">
-            <button type="button" id="answerA" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">A</button>
-            <button type="button" id="answerB" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">B</button>
-            <button type="button" id="answerC" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">C</button>
-            <button type="button" id="answerD" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">D</button>
-          </div>
-            <p id="pAnswerArea"></p>
+
+            <p id="pAnswerArea">
+              <button type="button" id="player1btn" class="btn btn-primary btn-lg" data-toggle="modal"> Player 1 </button>
+              <button type="button" id="player2btn" class="btn btn-primary btn-lg" data-toggle="modal"> Player 2 </button>
+            </p>
 
         </div>
-      <div class="right-border col-sm-2"></div>
+      <div class="right-border-lower col-sm-2">
+      <div id="player1scoreboard"></div>
+      <div id="player2scoreboard"></div>
+
+      </div>
     </div>
 </form>
 
@@ -103,7 +113,7 @@
 
 
 
-
+</div> <!--body div -->
 <!--Lower scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
