@@ -33,7 +33,22 @@ questionsArray = [
 { 'question' : 'Question #5: Which pitcher has the most career strikeouts in baseball history?',
   'choices' : ['A) Nolan Ryan, ', 'B) Randy Johnson, ', 'C) Pedro Martinez, ', 'D) Roger Clemens'],
   'answer' : 'A) Nolan Ryan, ',
-  'tidbit' : 'Ryan struck out 5,714 batters during his 27 year career, over than 800 more than second place Randy Johnson.'}
+  'tidbit' : 'Ryan struck out 5,714 batters during his 27 year career, over 800 more than second place Randy Johnson.'},
+
+{ 'question' : 'Question #6: Who\'s on first?',
+  'choices' : ['A) Who, ', 'B) What, ', 'C) I don\'t know, ', 'D) (confused picture)'],
+  'answer' : 'A) Who, ',
+  'tidbit' : '(pic of Abbott and Costello)'},
+
+{ 'question' : 'Question #7: The only jersey number retired by every MLB team is #42. Who wore this number?',
+  'choices' : ['A) Rickey Henderson, ', 'B), Babe Ruth, ', 'C) Mickey Mantle, ', 'D) Jackie Robinson'],
+  'answer' : 'D) Jackie Robinson',
+  'tidbit' : 'Robinson was the first African American to play in the modern era and was inducted into the National Baseball Hall of Fame in 1962.'},
+
+{ 'question' : 'Question #8: In what year did the Mariners begin play in Seattle?',
+  'choices' : ['A) 1977, ', 'B) 1995, ', 'C) 1950, ', 'D) 1900'],
+  'answer' : 'A) 1977, ',
+  'tidbit' : 'The Mariners originally played at the Kingdome before moving to Safeco Field in 1999.'}
 ];
 
 
@@ -83,7 +98,7 @@ $('#answerD').click(function() {
         $('#pAnswerArea').html(questionsArray[questionCounter].choices[3]);
         $('#myModalLabel').html('You Got it!');
         $('.modal-body').html(questionsArray[questionCounter].tidbit);
-  }
+  };
 })
 //start button listener
 $('#start').click(function() {
