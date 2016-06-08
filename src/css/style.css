@@ -3,6 +3,18 @@ body {
 
 }
 
+.right-border-upper {
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.right-border-lower {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
 #duckhunt {
   height: 100%;
   width: 100%;
@@ -12,6 +24,10 @@ button {
   background-color: #0C2C56;
   color: #C4CED4;
   font-family: 'Playball', cursive;
+}
+
+.right-border-upper, .right-border-lower div {
+  font-family: 'Orbitron', sans-serif;
 }
 
 #myModalLabel {
@@ -40,10 +56,7 @@ div {
   text-align: center;
 }
 
-#answerButtons button {
-  padding: 0 20px;
-  margin: 0 20px;
-}
+
 
 .title {
   text-align: center;
@@ -59,13 +72,14 @@ div {
   text-align: center;
 }
 
-.right-border {
+.right-border-upper {
   /*border: 1px solid blue;*/
   text-align:center;
+  font-family: 'Orbitron', sans-serif;
 }
 
 
-#questionDiv, #answer, .left-border, .right-border {
+#questionDiv, #answer, .left-border, .right-border-upper, .right-border-lower {
   height: 200px;
   text-align: center;
 }
@@ -84,6 +98,7 @@ div {
   /*border: 1px solid black;*/
 }
 
-#answerA, #answerB, #answerC, #answerD {
+#answerA, #answerB, #answerC, #answerD, #player1btn, #player2btn {
   display: none;
+  padding: auto;
 }
