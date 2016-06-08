@@ -3,6 +3,11 @@ body {
 
 }
 
+#duckhunt {
+  height: 100%;
+  width: 100%;
+}
+
 button {
   background-color: #0C2C56;
   color: #C4CED4;
