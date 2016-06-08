@@ -24,10 +24,16 @@ questionsArray = [
   'choices' : ['A) Tim Lincecum , ', 'B) Felix Hernandez, ', 'C) Randy Johnson, ', 'D) Sandy Koufax'],
   'answer' : 'D) Sandy Koufax',
   'tidbit' : 'Sandy Koufax threw four no-hitters in his career and famously refused to play on Yom Kippur during the 1965 World Series.'},
+
 { 'question' : 'Question #4: What was the final year that the Dodgers played in Brooklyn before moving to Los Angeles?',
   'choices' : ['A) 1922, ', 'B) 1957, ', 'C) 1974, ', 'D) The Dodgers played in Brooklyn?'],
   'answer' : 'B) 1957, ',
-  'tidbit' : 'They were originally called the "Dodgers" because of having to dodge trolley cars in Brooklyn'}
+  'tidbit' : 'They were originally called the "Dodgers" because Brooklyn residents, in those days, having to dodge trolley cars in the street.'},
+
+{ 'question' : 'Question #5: Which pitcher has the most career strikeouts in baseball history?',
+  'choices' : ['A) Nolan Ryan, ', 'B) Randy Johnson, ', 'C) Pedro Martinez, ', 'D) Roger Clemens'],
+  'answer' : 'A) Nolan Ryan, ',
+  'tidbit' : 'Ryan struck out 5,714 batters during his 27 year career, over than 800 more than second place Randy Johnson.'}
 ];
 
 
@@ -38,33 +44,45 @@ questionsArray = [
 //answer buttons
 $('#answerA').click(function() {
       console.log('before A');
+      $('.modal-body').html('');
     if (questionsArray[questionCounter].answer === questionsArray[questionCounter].choices[0]) {
         console.log('correct answer A');
         $('#pAnswerArea').html(questionsArray[questionCounter].choices[0]);
+        $('#myModalLabel').html('You Got it!');
+        $('.modal-body').html(questionsArray[questionCounter].tidbit);
   }
 })
 
 $('#answerB').click(function() {
       console.log('before B');
+      $('.modal-body').html('');
     if (questionsArray[questionCounter].answer === questionsArray[questionCounter].choices[1]) {
         console.log('correct answer B');
         $('#pAnswerArea').html(questionsArray[questionCounter].choices[1]);
+        $('#myModalLabel').html('You Got it!');
+        $('.modal-body').html(questionsArray[questionCounter].tidbit);
   }
 })
 
 $('#answerC').click(function() {
       console.log('before C');
+      $('.modal-body').html('');
     if (questionsArray[questionCounter].answer === questionsArray[questionCounter].choices[2]) {
         console.log('correct answer C');
         $('#pAnswerArea').html(questionsArray[questionCounter].choices[2]);
+        $('#myModalLabel').html('You Got it!');
+        $('.modal-body').html(questionsArray[questionCounter].tidbit);
   }
 })
 
 $('#answerD').click(function() {
       console.log('before D');
+      $('.modal-body').html('');
     if (questionsArray[questionCounter].answer === questionsArray[questionCounter].choices[3]) {
         console.log('correct answer D');
         $('#pAnswerArea').html(questionsArray[questionCounter].choices[3]);
+        $('#myModalLabel').html('You Got it!');
+        $('.modal-body').html(questionsArray[questionCounter].tidbit);
   }
 })
 //start button listener
@@ -73,17 +91,12 @@ $('#start').click(function() {
     //shows question
       $('#questionDiv').html(questionsArray[questionCounter].question);
       $('#showAnswerDiv').html(questionsArray[questionCounter].choices);
-
-      // answerQuestion(questionsArray);
-      // $('#start').hide();
-
-
-
-    // showQuestion(i);
-    // showChoices(i);
-
-    //tidbit function will show tidbit and advance quiz
-    // showTidbit();
+      $('#start').hide();
+      $('#next').show();
+      $('#answerA').show();
+      $('#answerB').show();
+      $('#answerC').show();
+      $('#answerD').show();
 })
 
 //Next question button
@@ -92,6 +105,7 @@ $('#next').click(function()   {
           if (questionCounter === questionsArray.length) {
         questionCounter = 0;
     }
+    $('#myModalLabel').html('Nope! Guess Again');
     $('#pAnswerArea').html('');
     $('#questionDiv').html(questionsArray[questionCounter].question);
     $('#showAnswerDiv').html(questionsArray[questionCounter].choices);

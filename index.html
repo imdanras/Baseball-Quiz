@@ -35,7 +35,7 @@
     <div class="container">
       <div class="left-border col-md-2">
       <form>
-        <button type="submit">Reset</button>
+        <button type="submit" id="reset">Reset</button>
       </form>
       </div>
         <div id="answer" class="col-md-8">
@@ -43,11 +43,12 @@
           <div id="showAnswerDiv">
 
           </div>
-            <button type="button" id="answerA">A</button>
-            <button type="button" id="answerB">B</button>
-            <button type="button" id="answerC">C</button>
-            <button type="button" id="answerD">D</button>
-            <br>
+          <div  id="answerButtons">
+            <button type="button" id="answerA" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">A</button>
+            <button type="button" id="answerB" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">B</button>
+            <button type="button" id="answerC" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">C</button>
+            <button type="button" id="answerD" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">D</button>
+          </div>
             <p id="pAnswerArea"></p>
 
         </div>
@@ -56,7 +57,24 @@
 </form>
 
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Nope! Guess Again...</h4>
+      </div>
+      <div class="modal-body">
 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
