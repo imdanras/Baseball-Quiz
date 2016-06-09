@@ -53,7 +53,12 @@ questionsArray = [
 { 'question' : 'Question #8: In what year did the Mariners begin play in Seattle?',
   'choices' : ['1977', '1995', '1950', '1900'],
   'answer' : '1977',
-  'tidbit' : 'The Mariners originally played at the Kingdome before moving to Safeco Field in 1999.' }
+  'tidbit' : 'The Mariners originally played at the Kingdome before moving to Safeco Field in 1999.' },
+
+{ 'question' : 'Question #9: In what year did the Cubs last win the World Series?',
+  'choices' : ['Never', '1908', '1951', '2003'],
+  'answer' : '1908',
+  'tidbit' : 'The Cubs currently play at Wrigley Field, the second-oldest stadium in the MLB.'}
 ];
 
 
