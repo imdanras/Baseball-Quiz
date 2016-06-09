@@ -15,3 +15,4 @@ with the most correct answers by the end wins the game.
 * Not yet able to move on unless the "Next" button is clicked
 * Still able to enter multiple answers (related to the "Next" issue)
 * Formatting only works on large screens
+* Unable to resolve ties
