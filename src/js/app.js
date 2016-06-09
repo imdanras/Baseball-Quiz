@@ -3,7 +3,6 @@ $(document).ready(function() {
 var questionCounter = 0;
 var player1Score = 0;
 var player2Score = 0;
-var winState = 'incorrect';
 var player1Status = false;
 var player2Status = false;
 
@@ -71,14 +70,11 @@ $('#answerA').click(function() {
       console.log('before A');
       $('.modal-body').html('');
     if (questionsArray[questionCounter].answer === questionsArray[questionCounter].choices[0]) {
-        winState = 'correct';
         console.log('correct answer A');
         scoreAdder();
         // $('#pAnswerArea').html(questionsArray[questionCounter].choices[0]);
         $('#myModalLabel').html('You Got it!');
         $('.modal-body').html(questionsArray[questionCounter].tidbit);
-  } else {
-    winState = 'incorrect';
   }
 })
 
