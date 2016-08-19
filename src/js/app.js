@@ -6,12 +6,6 @@ var player2Score = 0;
 var player1Status = false;
 var player2Status = false;
 
-
-
-
-
-
-
 //All questions stored in an object array
 questionsArray = [
 { 'question' : 'Question #1: Who has hit the most home runs in MLB history?',
@@ -60,125 +54,120 @@ questionsArray = [
   'tidbit' : 'The Cubs currently play at Wrigley Field, the second-oldest stadium in the MLB.'}
 ];
 
-
-
-
-
-
 //answer buttons
 $('#answerA').click(function() {
-      console.log('before A');
-      $('.modal-body').html('');
-    if (questionsArray[questionCounter].answer === questionsArray[questionCounter].choices[0]) {
-        console.log('correct answer A');
-        scoreAdder();
-        // $('#pAnswerArea').html(questionsArray[questionCounter].choices[0]);
-        $('#myModalLabel').html('You Got it!');
-        $('.modal-body').html(questionsArray[questionCounter].tidbit);
+  console.log('before A');
+  $('.modal-body').html('');
+  if (questionsArray[questionCounter].answer === questionsArray[questionCounter].choices[0]) {
+  console.log('correct answer A');
+  scoreAdder();
+  // $('#pAnswerArea').html(questionsArray[questionCounter].choices[0]);
+  $('#myModalLabel').html('You Got it!');
+  $('.modal-body').html(questionsArray[questionCounter].tidbit);
   }
 })
 
 $('#answerB').click(function() {
-      console.log('before B');
-      $('.modal-body').html('');
-      if (questionsArray[questionCounter].answer === questionsArray[questionCounter].choices[1]) {
-        winState = 'correct';
-        console.log('correct answer B');
-        scoreAdder();
-        // $('#pAnswerArea').html(questionsArray[questionCounter].choices[1]);
-        $('#myModalLabel').html('You Got it!');
-        $('.modal-body').html(questionsArray[questionCounter].tidbit);
+  console.log('before B');
+  $('.modal-body').html('');
+  if (questionsArray[questionCounter].answer === questionsArray[questionCounter].choices[1]) {
+    winState = 'correct';
+    console.log('correct answer B');
+    scoreAdder();
+    // $('#pAnswerArea').html(questionsArray[questionCounter].choices[1]);
+    $('#myModalLabel').html('You Got it!');
+    $('.modal-body').html(questionsArray[questionCounter].tidbit);
   }
 
 })
 
 $('#answerC').click(function() {
-      console.log('before C');
-      $('.modal-body').html('');
-    if (questionsArray[questionCounter].answer === questionsArray[questionCounter].choices[2]) {
-        console.log('correct answer C');
-        scoreAdder();
-        // $('#pAnswerArea').html(questionsArray[questionCounter].choices[2]);
-        $('#myModalLabel').html('You Got it!');
-        $('.modal-body').html(questionsArray[questionCounter].tidbit);
+  console.log('before C');
+  $('.modal-body').html('');
+  if (questionsArray[questionCounter].answer === questionsArray[questionCounter].choices[2]) {
+    console.log('correct answer C');
+    scoreAdder();
+    // $('#pAnswerArea').html(questionsArray[questionCounter].choices[2]);
+    $('#myModalLabel').html('You Got it!');
+    $('.modal-body').html(questionsArray[questionCounter].tidbit);
   }
 })
 
 $('#answerD').click(function() {
-      console.log('before D');
-      $('.modal-body').html('');
-    if (questionsArray[questionCounter].answer === questionsArray[questionCounter].choices[3]) {
-        console.log('correct answer D');
-        scoreAdder();
-        // $('#pAnswerArea').html(questionsArray[questionCounter].choices[3]);
-        $('#myModalLabel').html('You Got it!');
-        $('.modal-body').html(questionsArray[questionCounter].tidbit);
+  console.log('before D');
+  $('.modal-body').html('');
+  if (questionsArray[questionCounter].answer === questionsArray[questionCounter].choices[3]) {
+    console.log('correct answer D');
+    scoreAdder();
+    // $('#pAnswerArea').html(questionsArray[questionCounter].choices[3]);
+    $('#myModalLabel').html('You Got it!');
+    $('.modal-body').html(questionsArray[questionCounter].tidbit);
   };
 })
 //start button listener
 $('#start').click(function() {
-    //clicking will start game - show first question
-    //shows question
-      $('#questionDiv').html(questionsArray[questionCounter].question);
-      // $('#showAnswerDiv').html(questionsArray[questionCounter].choices);
-      $('#start').hide();
-      $('#next').show();
-      $('#player1btn').show();
-      $('#player2btn').show();
-      $('#answerA').html(questionsArray[questionCounter].choices[0]);
-      $('#answerB').html(questionsArray[questionCounter].choices[1]);
-      $('#answerC').html(questionsArray[questionCounter].choices[2]);
-      $('#answerD').html(questionsArray[questionCounter].choices[3]);
-      $('#player1scoreboard').html('Player 1 Score: ' + player1Score);
-      $('#player2scoreboard').html('Player 2 Score: ' + player2Score);
+  //clicking will start game - show first question
+  //shows question
+  $('#questionDiv').html(questionsArray[questionCounter].question);
+  // $('#showAnswerDiv').html(questionsArray[questionCounter].choices);
+  $('#start').hide();
+  $('#next').show();
+  $('#player1btn').show();
+  $('#player2btn').show();
+  $('#answerA').html(questionsArray[questionCounter].choices[0]);
+  $('#answerB').html(questionsArray[questionCounter].choices[1]);
+  $('#answerC').html(questionsArray[questionCounter].choices[2]);
+  $('#answerD').html(questionsArray[questionCounter].choices[3]);
+  $('#player1scoreboard').html('Player 1 Score: ' + player1Score);
+  $('#player2scoreboard').html('Player 2 Score: ' + player2Score);
 })
 
 //Next question button
 $('#next').click(function()   {
-    questionCounter++;
-      endOfGame();
-      console.log('player 1 score is ' + player1Score + ' and player 2 score is ' + player2Score);
-      $('#answerA').html(questionsArray[questionCounter].choices[0]);
-      $('#answerB').html(questionsArray[questionCounter].choices[1]);
-      $('#answerC').html(questionsArray[questionCounter].choices[2]);
-      $('#answerD').html(questionsArray[questionCounter].choices[3]);
-      $('#answerA').hide();
-      $('#answerB').hide();
-      $('#answerC').hide();
-      $('#answerD').hide();
-      $('#player1btn').show();
-      $('#player2btn').show();
-      $('#myModalLabel').html('Nope! Guess Again');
-      $('#questionDiv').html(questionsArray[questionCounter].question);
-      $('#player1scoreboard').html('Player 1 Score: ' + player1Score);
-      $('#player2scoreboard').html('Player 2 Score: ' + player2Score);
-})
+  questionCounter++;
+  endOfGame();
+  console.log('player 1 score is ' + player1Score + ' and player 2 score is ' + player2Score);
+  $('#answerA').html(questionsArray[questionCounter].choices[0]);
+  $('#answerB').html(questionsArray[questionCounter].choices[1]);
+  $('#answerC').html(questionsArray[questionCounter].choices[2]);
+  $('#answerD').html(questionsArray[questionCounter].choices[3]);
+  $('#answerA').hide();
+  $('#answerB').hide();
+  $('#answerC').hide();
+  $('#answerD').hide();
+  $('#player1btn').show();
+  $('#player2btn').show();
+  $('#myModalLabel').html('Nope! Guess Again');
+  $('#questionDiv').html(questionsArray[questionCounter].question);
+  $('#player1scoreboard').html('Player 1 Score: ' + player1Score);
+  $('#player2scoreboard').html('Player 2 Score: ' + player2Score);
+});
 
 //player 1 or player 2 buzzer
 $('#player1btn').click(function() {
-      player1Status = true;
-      player2Status = false;
-      console.log(player1Status);
-      console.log(player2Status);
-      $('#player1btn').hide();
-      $('#player2btn').hide();
-      $('#answerA').show();
-      $('#answerB').show();
-      $('#answerC').show();
-      $('#answerD').show();
-})
+  player1Status = true;
+  player2Status = false;
+  console.log(player1Status);
+  console.log(player2Status);
+  $('#player1btn').hide();
+  $('#player2btn').hide();
+  $('#answerA').show();
+  $('#answerB').show();
+  $('#answerC').show();
+  $('#answerD').show();
+});
 
 $('#player2btn').click(function() {
-      player1Status = false;
-      player2Status = true;
-      console.log(player1Status);
-      console.log(player2Status);
-      $('#player1btn').hide();
-      $('#player2btn').hide();
-      $('#answerA').show();
-      $('#answerB').show();
-      $('#answerC').show();
-      $('#answerD').show();
+  player1Status = false;
+  player2Status = true;
+  console.log(player1Status);
+  console.log(player2Status);
+  $('#player1btn').hide();
+  $('#player2btn').hide();
+  $('#answerA').show();
+  $('#answerB').show();
+  $('#answerC').show();
+  $('#answerD').show();
 })
 
 function scoreAdder() {
@@ -191,27 +180,19 @@ function scoreAdder() {
 }
 
 function endOfGame() {
-
-    if (questionCounter === questionsArray.length) {
-      if (player1Score > player2Score) {
-          $('.body').html('Player 1 Wins!  <form><button type="submit" id="reloadButton">Replay</button></form>')
-        } else if (player2Score > player1Score) {
-          $('.body').html('Player 2 Wins! <form><button type="submit" id="reloadButton">Replay</button></form>')
-        }
-    }
+  if (questionCounter === questionsArray.length) {
+    if (player1Score > player2Score) {
+        $('.body').html('Player 1 Wins!  <form><button type="submit" id="reloadButton">Replay</button></form>')
+      } else if (player2Score > player1Score) {
+        $('.body').html('Player 2 Wins! <form><button type="submit" id="reloadButton">Replay</button></form>')
+      }
+  }
 }
 
 $('#reloadButton').click(function() {
     history.go(0);
     console.log('replay is clicked');
 })
-
-
-
-
-
-
-
 
 //document.ready parentheses below
 });
