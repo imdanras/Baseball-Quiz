@@ -102,3 +102,13 @@ div {
   display: none;
   padding: auto;
 }
+
+#scoreboard, #player1scoreboard, #player2scoreboard {
+  font-size: 1.5vw;
+}
+
+@media (max-width: 325px) {
+  #scoreboard {
+    padding: 0;
+  }
+}
